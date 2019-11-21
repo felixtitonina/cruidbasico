@@ -8,12 +8,12 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect(
-    "mongodb://localhost:27017/pessoaApi", { useUnifiedTopology: true }
+    "mongodb://localhost:27017/pessoaApicasa", { useUnifiedTopology: true }
 );
 
-requireDir('../server/models');
+requireDir('./server/models');
 
-app.use("/api", require("../server/route/routes"));
+app.use("/api", require("./server/route/routes"));
 app.listen(3000);
 
 
